@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.js"></script>
+	<script src="controller.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>AngularFormView</title>
+</head>
+<body>
+<div class="formDiv" ng-app="formApp" ng-controller="formcontroller" ng-init="loadTheForm()" >
+	<table>
+		<tr>
+			<th>S.No.</th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>City</th>
+		</tr>
+		<tr ng-repeat="x in formArray track by $index">
+			<td>{{$index+1}}</td>
+			<td><p ng-hide="editIt[$index]">{{x.name}}</p>
+				<input type="text" ng-model="x.name" ng-show="editIt[$index]">
+			</td>
+			<td><p ng-hide="editIt[$index]">{{x.age}}</p>
+				<input type="number" ng-model="x.age" ng-show="editIt[$index]">
+			</td>
+			<td><p ng-hide="editIt[$index]">{{x.city}}</p>
+				<input type="text" ng-model="x.city" ng-show="editIt[$index]">
+			</td>
+			<td>
+			<button ng-click="editRow($index)" ng-hide="editIt[$index]">Edit</button>
+    		<button ng-click="deleteRow($index)" ng-hide="editIt[$index]">Delete</button>
+    		<button ng-click="saveRow($index)" ng-show="editIt[$index]">Save</button>
+   			</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

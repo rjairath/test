@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>AngularForm</title>
+</head>
+<body>
+	<div ng-app="formApp" ng-controller="formcontroller" class="topLevelDiv" ng-init="loadTheForm()">
+		<div class="inputDiv"><input type="text" ng-model="name" placeholder="name"></div>
+		<div class="inputDiv"><p class="error">{{nameError}}</p></div>
+
+		<div class="inputDiv"><input type="number" ng-model="age" placeholder="age"></div>
+		<div class="inputDiv"><p class="error">{{ageError}}</p></div>
+
+		<div class="inputDiv"><input type="text" ng-model="city" placeholder="city"></div>
+		<div class="inputDiv"><p class="error">{{cityError}}</p></div>
+
+		<div class="inputDiv">
+			<button ng-click="submitMyForm()" class="buttonDiv">Submit</button>
+			<button ng-click="viewMyForm()" class="buttonDiv">View</button>	
+		</div>
+	</div>
+	<script src="controller.js"></script>
+</body>
+</html>
