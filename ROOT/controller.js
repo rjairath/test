@@ -34,6 +34,9 @@ app.controller('formcontroller', function($scope){
 		$scope.name="";
 		$scope.age="";
 		$scope.city="";
+		$scope.nameError="";
+		$scope.ageError="";
+		$scope.cityError="";
 		localStorage.setItem("items", JSON.stringify($scope.formArray));
 	}
 
@@ -67,5 +70,9 @@ app.controller('formcontroller', function($scope){
 		localStorage.setItem("items", JSON.stringify($scope.formArray));
 
 		$scope.editIt[index]=false;
+	}
+
+	$scope.goBack=function(){
+		location.href="/";
 	}
 });
