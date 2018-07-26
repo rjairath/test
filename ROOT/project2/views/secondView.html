@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="/project2/scripts/jquery.js"></script>
+	<script src="/project2/scripts/jquery-ui.js"></script>
+	<script src="/project2/scripts/secondScripts.js"></script>
+</head>
+<body>
+	<div id="accordion">
+	  <h3>First header</h3>
+	  <div><p>First content panel</p></div>
+
+	  <h3>Second header</h3>
+	  <div><p>Second content panel</p></div>
+
+	  <h3>Third header</h3>
+	  <div><p>Third content panel</p></div>
+	</div>
+
+	<div style="margin: 20px; padding: 20px">
+		<input type="text" id="tags" placeholder="favourite language">
+		<input type="text" id="datepicker" placeholder="pick a date">
+		<input type="text" id="sliderValue" placeholder="adjust slider" >
+		<button onclick="thirdPage()">Next Page</button>
+	</div>
+
+	<div style="margin: 20px; z-index: 0" id="slider"></div>
+	<div id="tabs">
+		<ul>
+			<li><a href="#fragment1">Pink Floyd</a></li>
+			<li><a href="#fragment2">Guns n Roses</a></li>
+			<li><a href="#fragment3">Queen</a></li>
+		</ul>
+		<div id="fragment1" title="Gilmour">
+			<p>Comfortably Numb</p>
+		</div>
+		<div id="fragment2" title="Axl Rose">
+			<p>November Rain</p>
+		</div>
+		<div id="fragment3" title="Freddie">
+			<p>Bohemian Rhapsody</p>
+		</div>
+	</div>
+</body>
+</html>

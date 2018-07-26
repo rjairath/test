@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>jQuery UI Draggable - Default functionality</title>
+	  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	  <style>
+	  	#redBox { 
+	  		width: 150px; height: 150px; background-color: red;
+	  		text-align: center;
+	  	 }
+	  	 #blueBox { 
+	  		width: 150px; height: 150px; background-color: blue;
+	  		text-align: center;
+	  	 }
+	  	 #dropHere { 
+	  	 	width: 250px; height: 250px; padding: 0.5em; 
+	  	 	float: right; margin: 10px;
+	  	 	background-color: yellow;
+	  	 	text-align: center;
+	  	 }
+	  </style>
+	  <script src="scripts/jquery.js"></script>
+	  <script src="scripts/jquery-ui.js"></script>
+	  <script src="scripts/scripts.js"></script>
+</head>
+<body>
+	<div id="redBox">
+	  <p>Drag me around</p>
+	</div>
+	<div id="blueBox">
+	  <p>Drag me around</p>
+	</div>
+	<button onclick="goToListview()">List View</button>
+	<div id="dropHere">
+		<p>Drop the red one here</p>
+	</div>
+</body>
+</html>

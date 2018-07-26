@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="/project2/scripts/jquery.js"></script>
+	<script src="/project2/scripts/jquery-ui.js"></script>
+	<script src="/project2/scripts/secondScripts.js"></script>
+</head>
+<body>
+	<div style="margin: 20px; padding: 20px">
+		<input type="text" id="datepickerFirst" placeholder="pick first date" >
+	</div>
+	<div style="margin: 20px; padding: 20px">
+		<input type="text" id="datepickerSecond" placeholder="pick second date within the next 30 days">
+	</div>
+	<div style="margin: 20px; padding: 20px">
+		<input type="number" id="minValue" placeholder="minValue" required>
+		<input type="number" id="maxValue" placeholder="maxValue" required>
+		<input type="number" id="actualValue" placeholder="actualValue" required>
+	</div>
+	
+	<button style="margin: 20px" id="submit" onclick="submitSlider()">Submit</button>
+	<div style="margin: 20px; z-index: 0" id="slider2">
+		<div id="custom-handle" class="ui-slider-handle"></div>
+	</div>
+</body>
+</html>
